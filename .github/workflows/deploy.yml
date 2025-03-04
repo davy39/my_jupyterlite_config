@@ -15,12 +15,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Mamba
-        run: |
-          "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-          source ~/.bashrc
-          eval "$(micromamba shell hook --shell bash)"
-          micromamba create -n myenv -c conda-forge
-          micromamba activate myenv
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          init-shell: bash
       - name: Install the dependencies
         run: |
           micromamba install -y -f requirements.txt
