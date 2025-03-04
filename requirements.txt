@@ -5,6 +5,7 @@ notebook~=7.3.2
 
 # XEUS Kernels
 jupyterlite-xeus-sqlite
+xeus-sql
 
 # Python kernel (optional)
 jupyterlite-pyodide-kernel==0.5.0
