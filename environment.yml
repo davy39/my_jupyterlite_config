@@ -8,22 +8,22 @@ dependencies:
   - xeus-nelson
   - xeus-sql
   - xeus-cpp
-  - numpy
-  - matplotlib
-  - pillow
-  - ipywidgets
-  - pip:
-      - ipycanvas
+  #- numpy
+  #- matplotlib
+  #- pillow
+  #- ipywidgets
+  #- pip:
+      #- ipycanvas
       #- jupyterlite-p5-kernel
-      - jupyterlite-xeus
+      #- jupyterlite-xeus
   # Core modules (mandatory)
-  - jupyterlite-core
-  - jupyterlab
-  - notebook
+  #- jupyterlite-core
+  #- jupyterlab
+  #- notebook
   # JavaScript kernel (optional)
   #- jupyterlite-javascript-kernel
   # Language support (optional)
-  - jupyterlab-language-pack-fr-FR
+  #- jupyterlab-language-pack-fr-FR
 # P5 kernel (optional)
 #jupyterlite-p5-kernel==0.1.0
 # JupyterLab: Fasta file renderer (optional)
