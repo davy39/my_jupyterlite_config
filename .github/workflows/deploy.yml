@@ -19,9 +19,11 @@ jobs:
         with:
           init-shell: bash
           environment-name: ci
-          environment-file: environment.yml
+          #environment-file: environment.yml
           generate-run-shell: true
-      - run: jupyter lite build --contents content --output-dir dist --XeusAddon.environment_file=environment.yml
+      - run: |
+          pip install -r requirements.txt
+          jupyter lite build --contents content --output-dir dist --XeusAddon.environment_file=environment.yml
         shell: micromamba-shell {0}
       
       - name: Upload artifact
