@@ -21,8 +21,9 @@ jobs:
           environment-name: ci
           environment-file: environment.yml
           generate-run-shell: true
-      - run: |
-          python -m jupyter lite build --contents content --output-dir dist
+      - run: jupyter lite build --contents content --output-dir dist
+        shell: micromamba-shell {0}
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
