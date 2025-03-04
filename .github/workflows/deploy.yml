@@ -18,7 +18,7 @@ jobs:
         run: |
           "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
           source ~/.bashrc
-          micromamba create -n myenv -f environment.yml
+          micromamba create -n myenv -c conda-forge
           micromamba activate myenv
       - name: Install the dependencies
         run: |
