@@ -21,7 +21,7 @@ jobs:
           environment-name: ci
           environment-file: environment.yml
           generate-run-shell: true
-      - run: jupyter lite build --contents content --output-dir dist
+      - run: jupyter lite build --contents content --output-dir dist --XeusAddon.environment_file=environment.yml
         shell: micromamba-shell {0}
       
       - name: Upload artifact
