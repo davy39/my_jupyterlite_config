@@ -3,7 +3,6 @@ channels:
   - https://repo.mamba.pm/emscripten-forge
   - conda-forge
 dependencies:
-  - jupyterlite-xeus
   - xeus-python
   - xeus-lua
   - xeus-nelson
@@ -15,35 +14,36 @@ dependencies:
   - ipywidgets
   - pip:
       - ipycanvas
-      - jupyterlite-p5-kernel
+      #- jupyterlite-p5-kernel
+      - jupyterlite-xeus
   # Core modules (mandatory)
   - jupyterlite-core
   - jupyterlab
   - notebook
   # JavaScript kernel (optional)
-  - jupyterlite-javascript-kernel
+  #- jupyterlite-javascript-kernel
   # Language support (optional)
   - jupyterlab-language-pack-fr-FR
 # P5 kernel (optional)
 #jupyterlite-p5-kernel==0.1.0
 # JupyterLab: Fasta file renderer (optional)
-  - jupyterlab-fasta>=3.3.0,<4
+  #- jupyterlab-fasta>=3.3.0,<4
 # JupyterLab: Geojson file renderer (optional)
-  - jupyterlab-geojson>=3.4.0,<4
+  #- jupyterlab-geojson>=3.4.0,<4
 # JupyterLab: guided tour (optional)
 # TODO: re-enable after https://github.com/jupyterlab-contrib/jupyterlab-tour/issues/82
 # jupyterlab-tour
 # JupyterLab: dark theme
-  - jupyterlab-night
+  #- jupyterlab-night
 # JupyterLab: Miami nights theme (optional)
-  - jupyterlab_miami_nights
+  #- jupyterlab_miami_nights
   
   # Python: ipyevents library for Jupyter notebooks (optional)
-  - ipyevents
+  #- ipyevents
   # Python: interative Matplotlib library for Jupyter notebooks (optional)
-  - ipympl
+  #- ipympl
   # Python: ipyleaflet library for Jupyter notebooks (optional)
-  - ipyleaflet
+  #- ipyleaflet
   # Python: plotting libraries (optional)
-  - plotly
-  - bqplot
+  #- plotly
+  #- bqplot
