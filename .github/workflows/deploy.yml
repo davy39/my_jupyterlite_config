@@ -16,8 +16,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Mamba
         run: |
-          wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj -C /usr/local/bin --strip-components 1 bin/micromamba
-          micromamba shell init -s bash -p ~/micromamba
+          "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
           source ~/.bashrc
           micromamba create -n myenv -f environment.yml
           micromamba activate myenv
