@@ -6,7 +6,7 @@ dependencies:
   - xeus-python
   - xeus-lua
   - xeus-nelson
-  - xeus-sql
+  - xeus-sqlite
   - xeus-cpp
   #- numpy
   #- matplotlib
