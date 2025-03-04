@@ -14,13 +14,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: Setup Mamba
+        run: |
+          wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj -C /usr/local/bin --strip-components 1 bin/micromamba
+          micromamba shell init -s bash -p ~/micromamba
+          source ~/.bashrc
+          micromamba create -n myenv -f environment.yml
+          micromamba activate myenv
       - name: Install the dependencies
         run: |
-          python -m pip install -r requirements.txt
+          micromamba install -y -f requirements.txt
       - name: Build the JupyterLite site
         run: |
           cp README.md content
